@@ -23,7 +23,7 @@ public class AlunoController {
 	@Autowired
 	private AlunoService alunoService;
 	
-	@GetMapping("/all")
+	@GetMapping
 	public ResponseEntity<List<Aluno>> getAllAluno() {		
 		return ResponseEntity.ok().body(this.alunoService.getAllAluno());
 	}
@@ -33,7 +33,7 @@ public class AlunoController {
 		return ResponseEntity.ok().body(this.alunoService.getAlunoById(id));
 	}
 	
-	@PostMapping("/insert")	
+	@PostMapping
 	public ResponseEntity<Aluno> insertAluno(@Valid @RequestBody Aluno aluno) {
 		return ResponseEntity.ok().body(this.alunoService.insertAluno(aluno));
 	}
