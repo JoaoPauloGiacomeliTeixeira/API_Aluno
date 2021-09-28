@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.api.aluno.exception.NotFoundAlunoException;
 import com.api.aluno.exception.UpdateAlunoException;
@@ -13,7 +12,6 @@ import com.api.aluno.model.Aluno;
 import com.api.aluno.repository.AlunoRepository;
 
 @Service
-@Transactional
 public class AlunoServiceImpl implements AlunoService {
 
 	@Autowired
